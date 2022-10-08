@@ -15,11 +15,11 @@ import java.io.IOException;
 import java.util.List;
 
 import moe.studio.frontia.ext.PluginError;
-import moe.studio.downloader.DownloadRequest;
-import moe.studio.downloader.SyncDownloadProcessorImpl;
-import moe.studio.downloader.core.DownloadListener;
-import moe.studio.downloader.core.DownloadProcessor;
-import moe.studio.downloader.core.RetryPolicy.RetryPolicyImpl;
+//import moe.studio.downloader.DownloadRequest;
+//import moe.studio.downloader.SyncDownloadProcessorImpl;
+//import moe.studio.downloader.core.DownloadListener;
+//import moe.studio.downloader.core.DownloadProcessor;
+//import moe.studio.downloader.core.RetryPolicy.RetryPolicyImpl;
 import moe.studio.frontia.Internals.ApkUtils;
 import moe.studio.frontia.Internals.FileUtils;
 import moe.studio.frontia.core.PluginRequest;
@@ -372,7 +372,7 @@ class PluginUpdaterImpl implements PluginUpdater {
     private void downloadPlugin(final PluginRequest request, File destFile)
             throws PluginError.UpdateError, PluginError.CancelError {
 
-        // Using FileDownloader to complete the download task.
+     /*   // Using FileDownloader to complete the download task.
         final long fileSize = request.getFileSize();
 
         final String[] errorMsg = {null};
@@ -423,6 +423,6 @@ class PluginUpdaterImpl implements PluginUpdater {
 
         } else if (!TextUtils.isEmpty(errorMsg[0])) {
             throw new PluginError.UpdateError(errorMsg[0], PluginError.ERROR_UPD_DOWNLOAD);
-        }
+        }*/
     }
 }

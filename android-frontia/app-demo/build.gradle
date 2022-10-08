@@ -43,11 +43,12 @@ dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
 
     // Frontia
-    debugCompile project(path: ':frontia', configuration: 'debug')
-    releaseCompile project(path: ':frontia', configuration: 'release')
+//    debugImplementation project(path: ':frontia', configuration: 'debug')
+//    releaseImplementation project(path: ':frontia', configuration: 'release')
 
     // Plugin
-    compile project(':stackblur-behaviour')
+    implementation project(':stackblur-behaviour')
+    implementation project(':frontia')
 
     // App Library
     compile('com.facebook.fresco:fresco:0.14.1') {
