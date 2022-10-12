@@ -66,21 +66,21 @@ android {
 
 dependencies {
 
-    compile project(path: ':frontia-tools')
+    implementation project(path: ':frontia-tools')
 
     def frontia = new File(project(':frontia').getBuildDir().absolutePath
-            + '/intermediates/bundles/debug/classes.jar')
+            + '/intermediates/compile_library_classes/debug/classes.jar')
     if (frontia.exists()) {
-        provided files(frontia)
+        compileOnly files(frontia)
     } else {
-        compile project(path: ':frontia')
+        implementation project(path: ':frontia')
     }
 
     def behavior = new File(project(':stackblur-behaviour').getBuildDir().absolutePath
-            + '/intermediates/bundles/debug/classes.jar')
+            + '/intermediates/compile_library_classes/debug/classes.jar')
     if (behavior.exists()) {
-        provided files(behavior)
+        compileOnly files(behavior)
     } else {
-        compile project(path: ':stackblur-behaviour')
+        implementation project(path: ':stackblur-behaviour')
     }
 }

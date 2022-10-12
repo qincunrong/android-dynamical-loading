@@ -40,7 +40,7 @@ project.afterEvaluate {
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
 
     // Frontia
 //    debugImplementation project(path: ':frontia', configuration: 'debug')
@@ -51,8 +51,8 @@ dependencies {
     implementation project(':frontia')
 
     // App Library
-    compile('com.facebook.fresco:fresco:0.14.1') {
+    implementation('com.facebook.fresco:fresco:0.14.1') {
         exclude group: 'com.android.support'
     }
-    compile 'com.android.support:design:23.4.0'
+    implementation 'com.android.support:design:23.4.0'
 }

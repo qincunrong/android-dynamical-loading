@@ -27,11 +27,14 @@ android {
 dependencies {
     // Frontia
     def frontia = new File(project(':frontia').getBuildDir().absolutePath
-            + '/intermediates/bundles/debug/classes.jar')
+            + '/intermediates/compile_library_classes/debug/classes.jar')
+
     if (frontia.exists()) {
-        provided files(frontia)
+        System.out.println("frontia provided")
+        compileOnly files(frontia)
     } else {
-        compile project(':frontia')
+        System.out.println("frontia compile")
+        implementation project(':frontia')
     }
 
 }

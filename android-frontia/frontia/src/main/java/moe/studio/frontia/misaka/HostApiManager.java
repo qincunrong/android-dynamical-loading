@@ -97,5 +97,4 @@ public final class HostApiManager {
         hostApiWeakMap.remove(key);
     }
 
-
 }
